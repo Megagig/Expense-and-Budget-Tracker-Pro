@@ -68,6 +68,12 @@ const Navbar: React.FC = () => {
             </div>
           </div>
         )}
+        <SignedIn>
+          <UserButton />
+        </SignedIn>
+        <SignedOut>
+          <SignInButton />
+        </SignedOut>
       </div>
 
       <div onClick={handleNav} className="block md:hidden">
