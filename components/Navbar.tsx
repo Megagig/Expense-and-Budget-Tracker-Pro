@@ -3,7 +3,8 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import { ShoppingBagIcon } from 'lucide-react';
-// import ThemeSelector from './ThemeSelector';
+import ThemeSelector from './ThemeSelector';
+import { SignInButton, SignedIn, SignedOut, UserButton } from '@clerk/nextjs';
 import { useUser } from '@clerk/nextjs';
 
 interface NavItem {
@@ -55,7 +56,7 @@ const Navbar: React.FC = () => {
       </ul>
 
       <div className="flex items-center gap-4">
-        {/* <ThemeSelector /> */}
+        <ThemeSelector />
 
         {isSignedIn && (
           <div className="indicator">

@@ -1,3 +1,4 @@
+'use client';
 import { create } from 'zustand';
 
 // define the shape of the store's state
@@ -8,9 +9,14 @@ interface ThemeStore {
 
 // create the zustand store with type safety
 export const useThemeStore = create<ThemeStore>((set) => ({
-  theme: localStorage.getItem('preferred-theme') || 'forest',
+  theme:
+    typeof window !== 'undefined'
+      ? localStorage.getItem('preferred-theme') || 'forest'
+      : 'forest',
   setTheme: (theme: string) => {
-    localStorage.setItem('preferred-theme', theme);
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('preferred-theme', theme);
+    }
     set({ theme });
   },
 }));
