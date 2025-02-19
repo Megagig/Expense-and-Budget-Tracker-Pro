@@ -13,7 +13,12 @@ interface NavItem {
   path: string;
 }
 
-const Navbar: React.FC = () => {
+interface NavbarProps {
+  user: any;
+  isSignedIn: boolean | undefined;
+}
+
+const Navbar: React.FC<NavbarProps> = ({ user }) => {
   // State to manage the navbar's visibility
   const [nav, setNav] = useState<boolean>(false);
 
