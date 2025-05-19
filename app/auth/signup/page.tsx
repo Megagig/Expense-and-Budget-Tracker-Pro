@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { FcGoogle } from 'react-icons/fc';
-import { signIn } from '@/auth';
+// Remove these imports since they're not needed in a client component
 
 export default function SignUp() {
   const router = useRouter();
@@ -49,10 +49,15 @@ export default function SignUp() {
       }
 
       // Sign in the user after successful registration
-      await signIn('credentials', {
-        email,
-        password,
-        redirect: false,
+      await fetch('/api/auth/session', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email,
+          password
+        }),
       });
 
       router.push('/dashboard');
@@ -65,7 +70,8 @@ export default function SignUp() {
   const handleGoogleSignIn = async () => {
     setLoading(true);
     try {
-      await signIn('google', { callbackUrl: '/dashboard' });
+      // Redirect to Google sign in
+      window.location.href = '/api/auth/signin/google';
     } catch (error) {
       setError('An error occurred with Google sign in');
       setLoading(false);
