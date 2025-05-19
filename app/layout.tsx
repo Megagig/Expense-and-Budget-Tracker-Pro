@@ -1,16 +1,17 @@
 import type { Metadata } from 'next';
 import { Roboto } from 'next/font/google';
 import './globals.css';
-import { ClerkProvider } from '@clerk/nextjs';
 import { ThemeProvider } from '@/components/ThemeProvider';
 import { UserProvider } from '@/components/UserProvider';
 import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 
-const roboto = Roboto({ weight: '400', subsets: ['latin'] });
+const roboto = Roboto({ weight: ['400', '500', '700'], subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Expense Tracker',
-  description: 'Track your expenses and create a budget',
+  title: 'Budget Tracker Pro',
+  description: 'Track your expenses and manage your budget with ease',
+  keywords: 'budget, expense, finance, tracker, money management',
 };
 
 export default function RootLayout({
@@ -19,17 +20,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider>
-      <html lang="en">
-        <body className={roboto.className}>
-          <ThemeProvider>
-            <UserProvider>
-              <Navbar user={children} isSignedIn={true} />
-              {children}
-            </UserProvider>
-          </ThemeProvider>
-        </body>
-      </html>
-    </ClerkProvider>
+    <html lang="en">
+      <body className={roboto.className}>
+        <ThemeProvider>
+          <UserProvider>
+            <div className="flex flex-col min-h-screen">
+              <Navbar />
+              <main className="flex-grow">
+                {children}
+              </main>
+              <Footer />
+            </div>
+          </UserProvider>
+        </ThemeProvider>
+      </body>
+    </html>
   );
 }

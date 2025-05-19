@@ -1,0 +1,78 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f8fafc" rx="10" ry="10"/>
+  
+  <!-- Header -->
+  <rect width="800" height="60" fill="#4F46E5" rx="10" ry="10"/>
+  <text x="30" y="38" font-family="Arial" font-size="22" font-weight="bold" fill="white">Budget Tracker Pro</text>
+  
+  <!-- Sidebar -->
+  <rect x="0" y="60" width="200" height="540" fill="#f1f5f9"/>
+  <rect x="20" y="100" width="160" height="40" fill="#e0e7ff" rx="5" ry="5"/>
+  <text x="50" y="125" font-family="Arial" font-size="14" fill="#4F46E5">Dashboard</text>
+  
+  <rect x="20" y="150" width="160" height="40" fill="transparent" rx="5" ry="5"/>
+  <text x="50" y="175" font-family="Arial" font-size="14" fill="#64748b">Transactions</text>
+  
+  <rect x="20" y="200" width="160" height="40" fill="transparent" rx="5" ry="5"/>
+  <text x="50" y="225" font-family="Arial" font-size="14" fill="#64748b">Budgets</text>
+  
+  <rect x="20" y="250" width="160" height="40" fill="transparent" rx="5" ry="5"/>
+  <text x="50" y="275" font-family="Arial" font-size="14" fill="#64748b">Reports</text>
+  
+  <rect x="20" y="300" width="160" height="40" fill="transparent" rx="5" ry="5"/>
+  <text x="50" y="325" font-family="Arial" font-size="14" fill="#64748b">Settings</text>
+  
+  <!-- Main Content Area -->
+  <text x="220" y="100" font-family="Arial" font-size="22" font-weight="bold" fill="#334155">Dashboard Overview</text>
+  
+  <!-- Summary Cards -->
+  <rect x="220" y="120" width="170" height="120" fill="white" rx="8" ry="8" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="240" y="150" font-family="Arial" font-size="14" fill="#64748b">Total Balance</text>
+  <text x="240" y="185" font-family="Arial" font-size="24" font-weight="bold" fill="#334155">$4,250.68</text>
+  
+  <rect x="410" y="120" width="170" height="120" fill="white" rx="8" ry="8" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="430" y="150" font-family="Arial" font-size="14" fill="#64748b">Monthly Income</text>
+  <text x="430" y="185" font-family="Arial" font-size="24" font-weight="bold" fill="#10B981">$3,850.00</text>
+  
+  <rect x="600" y="120" width="170" height="120" fill="white" rx="8" ry="8" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="620" y="150" font-family="Arial" font-size="14" fill="#64748b">Monthly Expenses</text>
+  <text x="620" y="185" font-family="Arial" font-size="24" font-weight="bold" fill="#EF4444">$2,640.25</text>
+  
+  <!-- Chart Area -->
+  <rect x="220" y="260" width="550" height="300" fill="white" rx="8" ry="8" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="240" y="290" font-family="Arial" font-size="16" font-weight="bold" fill="#334155">Monthly Spending Breakdown</text>
+  
+  <!-- Pie Chart -->
+  <circle cx="350" cy="400" r="80" fill="#4F46E5" opacity="0.2"/>
+  <path d="M350,400 L350,320 A80,80 0 0,1 423,363 z" fill="#4F46E5"/>
+  <path d="M350,400 L423,363 A80,80 0 0,1 395,472 z" fill="#10B981"/>
+  <path d="M350,400 L395,472 A80,80 0 0,1 270,445 z" fill="#F59E0B"/>
+  <path d="M350,400 L270,445 A80,80 0 0,1 295,332 z" fill="#EF4444"/>
+  <path d="M350,400 L295,332 A80,80 0 0,1 350,320 z" fill="#0EA5E9"/>
+  
+  <!-- Legend -->
+  <rect x="480" y="330" width="15" height="15" fill="#4F46E5"/>
+  <text x="505" y="343" font-family="Arial" font-size="14" fill="#334155">Housing (25%)</text>
+  
+  <rect x="480" y="360" width="15" height="15" fill="#10B981"/>
+  <text x="505" y="373" font-family="Arial" font-size="14" fill="#334155">Food (20%)</text>
+  
+  <rect x="480" y="390" width="15" height="15" fill="#F59E0B"/>
+  <text x="505" y="403" font-family="Arial" font-size="14" fill="#334155">Transportation (15%)</text>
+  
+  <rect x="480" y="420" width="15" height="15" fill="#EF4444"/>
+  <text x="505" y="433" font-family="Arial" font-size="14" fill="#334155">Entertainment (25%)</text>
+  
+  <rect x="480" y="450" width="15" height="15" fill="#0EA5E9"/>
+  <text x="505" y="463" font-family="Arial" font-size="14" fill="#334155">Others (15%)</text>
+  
+  <!-- Bar Chart Lines -->
+  <line x1="240" y1="500" x2="740" y2="500" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="240" y1="470" x2="240" y2="500" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="340" y1="470" x2="340" y2="500" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="440" y1="470" x2="440" y2="500" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="540" y1="470" x2="540" y2="500" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="640" y1="470" x2="640" y2="500" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="740" y1="470" x2="740" y2="500" stroke="#e2e8f0" stroke-width="1"/>
+</svg>
